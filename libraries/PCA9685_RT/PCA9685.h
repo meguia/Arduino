@@ -35,6 +35,7 @@ public:
   bool    begin(uint8_t sda, uint8_t scl);
 #endif
   bool    begin();
+  bool    busSpeed(uint32_t bus_speed);
   void    reset();
   bool    isConnected();
   
