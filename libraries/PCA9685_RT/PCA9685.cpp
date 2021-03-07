@@ -98,6 +98,12 @@ bool PCA9685::begin()
   return true;
 }
 
+bool PCA9685::busSpeed(uint32_t bus_speed)
+{
+  _wire->setClock(bus_speed);
+  if (! isConnected()) return false;
+  return true;
+}
 
 bool PCA9685::isConnected()
 {
